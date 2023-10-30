@@ -11,14 +11,15 @@ Create Table Adresler(
 
 	select *from Adresler
 	insert into (adres_no,cadde,mahalle,bina_no,sehir,posta_kodu,ulke)
-	values (1,'orhangai','esentepe','5','tokat','60100','tï¿½rkiye',)
+	values (1,'orhangai','esentepe','5','tokat','60100','türkiye',)
 
 
 
 select* from Adresler
-	update Adresler set cadde='atatï¿½rk' where adres_no ='1'
+	update Adresler set cadde='atatürk' where adres_no ='1'
 	delete from Adresler
 	where Cadde
+
 
 	Create Table Emanet(
 	
@@ -58,16 +59,16 @@ select*from Emanet
 Create Table Kitaplar(
 	
 	ISBN int identity(1,1),
-	Kitap_adï¿½ Varchar(50),
-	Yayï¿½n_Tarihi Varchar(50),
+	Kitap_adý Varchar(50),
+	Yayýn_Tarihi Varchar(50),
 	S_Sayisi Varchar(50),
 	)
 
 	select *from Kitaplar
-	instert into (ISBN, Kitap_adï¿½, Yayï¿½n_Tarihi, S_Sayisi)
-	Values ('6055937515', 'Algoritma ve Programlamaya Giriï¿½', '01.07.2009', '306')
+	instert into (ISBN, Kitap_adý, Yayýn_Tarihi, S_Sayisi)
+	Values ('6055937515', 'Algoritma ve Programlamaya Giriþ', '01.07.2009', '306')
 
-update Kitaplar set Yayï¿½n_Tarihi='08.07.2009' where  Kitap_adï¿½='Algoritma ve Programlamaya Giriï¿½'
+update Kitaplar set Yayýn_Tarihi='08.07.2009' where  Kitap_adý='Algoritma ve Programlamaya Giriþ'
 	
 
 delete *from Kitaplar 
@@ -79,15 +80,15 @@ delete *from Kitaplar
 Create Table Yazarlar(
 
 Yazar_no int identity(1,1),
-Yazar_adï¿½ Varchar(50),
+Yazar_adý Varchar(50),
 Yazar_soyadi Varchar(50),
 	)
 
 		select *from Yazarlar
-	instert into (Yazar_no, Yazar_adï¿½, Yazar_soyadi)
-	Values ('1', 'Turgut', 'ï¿½zseven')
+	instert into (Yazar_no, Yazar_adý, Yazar_soyadi)
+	Values ('1', 'Turgut', 'Özseven')
 
-	update Yazarlar set Yazar_adï¿½='ali' where  Yazar_no='1'
+	update Yazarlar set Yazar_adý='ali' where  Yazar_no='1'
 	delete *from Yazarlar 
 
 	where Yazar_soyadi
@@ -116,17 +117,17 @@ Yazar_soyadi Varchar(50),
 Create Table Kategoriler(
 	
 	Kategori_no int identity(1,1),
-	Kategori_adï¿½ Varchar(50),
+	Kategori_adý Varchar(50),
 	)
 
 	select *from Kategoriler
-	instert into (Kategori_no, Kategori_adï¿½)
+	instert into (Kategori_no, Kategori_adý)
 	Values ('1', 'Bilgisayar')
 
 
-update Kategoriler set Kategori_adï¿½='Bilgisayar' where  Kategori_no='1'
+update Kategoriler set Kategori_adý='Bilgisayar' where  Kategori_no='1'
 delete *from Kategoriler 
-where  Kategori_adï¿½
+where  Kategori_adý
 
 
 
@@ -134,8 +135,8 @@ where  Kategori_adï¿½
 create table uyeler ( 
  
 uyeID int not null primary key , 
-uye_adï¿½ nvarchar (50) not null, 
-uye_soy_adï¿½ nvarchar (50) not null, 
+uye_adý nvarchar (50) not null, 
+uye_soy_adý nvarchar (50) not null, 
 cinsiyet nvarchar (2) null , 
 adres_no nvarchar (50) not null , 
 telefon nvarchar (50) not null , 
@@ -144,8 +145,8 @@ eposta nvarchar (50) null,
  
  
 select *from  uyeler  
-  insert into uyeler(uyeID,uye_adï¿½,uye_soyadï¿½,cinsiyet,adres_no,telefon,eposta), 
-  values (1,'ayï¿½e','kara','0','3','25698554215','aa@maiil.com',) 
+  insert into uyeler(uyeID,uye_adý,uye_soyadý,cinsiyet,adres_no,telefon,eposta), 
+  values (1,'ayþe','kara','0','3','25698554215','aa@maiil.com',) 
  
  
 select *from uyeler  
@@ -176,18 +177,18 @@ create table kutuphane (
 kutuphaneID int not null primary key , 
 adres_no nvarchar (50) not null, 
 kutuphane_ismi nvarchar (50) not null, 
-aï¿½ï¿½klama nvarchar (2) null , 
+açýklama nvarchar (2) null , 
  
 select*from kutuphane  
-insert into (kutuphaneID,adres_no,kutuphane_ismi,aï¿½ï¿½klama) 
-values (1,'1','merkez','merkez_kï¿½tï¿½phane') 
+insert into (kutuphaneID,adres_no,kutuphane_ismi,açýklama) 
+values (1,'1','merkez','merkez_kütüphane') 
 select* from kutuphane 
   
  
-update kutï¿½phane set  adres_no='4' where kutuphaneID='1' 
+update kutüphane set  adres_no='4' where kutuphaneID='1' 
  
  delete *from kutuphane 
- where aï¿½ï¿½klama  
+ where açýklama  
 
 
 Create table Kitap_ Kutuphane( 
@@ -202,9 +203,9 @@ Values ('1', '6055937515', '3')
  
 select *from Kitap_Kutuphane 
  
-update Kitap_kï¿½tï¿½phane set miktar='5' where 'kutuphane_no'=1 
+update Kitap_kütüphane set miktar='5' where 'kutuphane_no'=1 
  
-delete *from kitap_kï¿½tï¿½phane  
+delete *from kitap_kütüphane  
 where miktar 
  
  
@@ -223,7 +224,7 @@ select *from Kitap_Kategori
  
 update Kitap_Kategori set ISBN='3' where 'kutuphane_no'=1 
  
-delete *from kitap_kï¿½tï¿½phane  
+delete *from kitap_kütüphane  
 where ISBN 
  
  
